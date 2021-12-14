@@ -2,6 +2,7 @@
 This project was made through npx creat-react-app blooger.
 styled components was used to style the project.
 custom hooks where used to store arrays with the assets.
+Check the build at https://blooger-practice.netlify.app
 
 there are no animations in the style, everything happens using transition.
 
