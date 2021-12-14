@@ -9,7 +9,7 @@ The BlogPosts.jsx carrousel:
 
 The useBlogPostImages customHook has 2 useStates and 1 const variable, the first useState has 3 numbers [0,1,2], these will be used as index to render the objects of the second state, this that has all the objects that contain images and text, and the constant has 3 words [first, middle, last], this one is used in the fowardPosts and backwardPosts functions. In the BlogPosts component, the postArray state render with a map 3 objects from the allPostsArray state.
 
-The functions fowardPosts and backwardsPosts:
+The functions fowardPosts
 
 ~~~ 
 
