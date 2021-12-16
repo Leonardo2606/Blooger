@@ -1,7 +1,7 @@
 import './App.css';
 import { MainBox, MainBoxTitle, MainBoxSubtitle, MainBoxButton } from './style';
 import HeaderBlooger from './components/HeaderBlooger';
-import BlogPost from './components/BlogPosts';
+import BlogPostCarousel from './components/BlogPostCarousel';
 import MainContent from './components/MainContent';
 import Footer from './components/Footer';
 
@@ -18,7 +18,7 @@ function App() {
         </MainBoxTitle>
         <MainBoxButton>Explore</MainBoxButton>
       </MainBox>
-      <BlogPost />
+      <BlogPostCarousel />
       <MainContent />
       <Footer />
     </div>
