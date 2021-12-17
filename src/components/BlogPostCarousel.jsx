@@ -18,14 +18,14 @@ const LeftButton = styled(Button)`
 
 const BlogPostCarousel = () => {
 
-    const [postArray, allPostsArray, fowardPosts, backwardPosts] = useBlogPostImages();
+    const [postArray, allPostsArray, forwardPosts, backwardPosts] = useBlogPostImages();
 
     return (
 
         <BlogPostContainer>
             <BlogPostButtonsDiv>
                 <LeftButton onClick={backwardPosts}></LeftButton>
-                <RightButton onClick={fowardPosts}></RightButton>
+                <RightButton onClick={forwardPosts}></RightButton>
             </BlogPostButtonsDiv>
             <BlogPostSection >
                 {postArray.map((idx, index) => {

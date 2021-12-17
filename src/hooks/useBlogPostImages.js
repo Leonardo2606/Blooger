@@ -24,7 +24,7 @@ function useBlogPostImages() {
     ]);
     const [first, middle, last] = [...postArray];
 
-    function fowardPosts() {
+    function forwardPosts() {
         if([last] < allPostsArray.length-1){
         setPostArray([middle, last, last+1]);}
         else setPostArray([last-1, last, 0]);
@@ -36,7 +36,7 @@ function useBlogPostImages() {
         } else setPostArray([allPostsArray.length-1, first, middle]);
     };
 
-    return [postArray, allPostsArray, fowardPosts, backwardPosts];
+    return [postArray, allPostsArray, forwardPosts, backwardPosts];
 
 }
 
