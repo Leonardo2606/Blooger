@@ -48,7 +48,7 @@ const MainContent = () => {
                 })}
             </MainPosts>
             <SideBar>
-                <GenericTitle>Category "this must apear only in mainContent branch"</GenericTitle>
+                <GenericTitle>Category</GenericTitle>
                 <SideBarList>
                     {categories.map((obj, index ) => {
                         return (
