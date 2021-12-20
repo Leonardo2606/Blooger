@@ -1,19 +1,20 @@
 import styled from 'styled-components';
 
 export const Container = styled.main`
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 60% 35%;
 `
 
 export const MainPosts = styled.div`
     display: flex;
     flex-direction: column;
-    flex: 0 1 55%;
 `
 
 export const SideBar = styled.div`
-    flex: 0 1 30%;
+    width: 100%;
+    margin-left: 30px;  
 `
 
 export const PostBox = styled.div`
@@ -26,7 +27,6 @@ export const PostBox = styled.div`
 `
 
 export const PostImg = styled.img`
-    width: 100%;
     transition: all 1s ease;
     :hover {
         transform: scale(1.05);
@@ -66,8 +66,11 @@ export const GenericTitle = styled.h2`
 `
 
 export const SideBarList = styled.ul`
-    margin: 0;
     list-style: none;
+    transition: all 1s ease;
+    @media (max-width: 580px) {
+        padding: 0;
+    }
 `
 
 export const CategoriesListItem = styled.li`
@@ -86,6 +89,8 @@ export const CategoriesListItem = styled.li`
 export const PopularPostItem = styled.li`
     overflow: hidden;
     margin: 0 0 80px 0;
+    display: flex;
+    flex-direction: column;
 `
 
 export const PopularPostItemTitle = styled.h4`
