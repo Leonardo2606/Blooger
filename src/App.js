@@ -1,4 +1,3 @@
-import './App.css';
 import { MainBox, MainBoxTitle, MainBoxSubtitle, MainBoxButton } from './style';
 import HeaderBlooger from './components/HeaderBlooger';
 import BlogPostCarousel from './components/BlogPostCarousel';

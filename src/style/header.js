@@ -25,13 +25,13 @@ export const Title = styled.h1`
 
 export const NavBarList = styled.ul`
     list-style: none;
-    padding: 0 0 10px 0;
+    padding: 0;
     
 `
 
 export const NavBarItem = styled.li`
     display: inline-block;
-    padding: 0 15px;
+    padding: 3px 5px 0 5px;
     border-right: 1px solid rgba(0,0,0,0);
     border-left: 1px solid rgba(0,0,0,0);
     &:hover {
@@ -41,10 +41,11 @@ export const NavBarItem = styled.li`
         text-shadow: 1px 1px 1px rgba(0,0,0,10);
     }
     &:active{
-        box-shadow: 0px 0px 5px black; 
+        box-shadow: 0px 0px 5px black;
+        background-color: black; 
     }
-    @media (max-width: 788px) {
-        margin: 5px 0;
+    @media (max-width: 600px) {
+        padding: 0;
     }
 `
 

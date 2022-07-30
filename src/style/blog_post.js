@@ -1,25 +1,5 @@
-import styled, {keyframes} from 'styled-components';
+import styled from 'styled-components';
 import Background2 from '../assets/Abract01.png';
-
-/*const closer = keyframes`
-    0% {
-        margin: 0 100px;
-    }
-    100% {              
-        margin: 0;
-    }
-`
-
-//////////////////  Melhor usar transition do que essas animações /////////////////////////////////
-
-const further = keyframes`
-    0%{
-        margin: 0;
-    }
-    100% {
-        margin: 0 100px;
-    }
-`*/
 
 export const BlogCard = styled.div`
     display: flex;

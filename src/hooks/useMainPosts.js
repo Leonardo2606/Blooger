@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import blog1 from '../assets/Blog-post/blog1.png';
-import blog2 from '../assets/Blog-post/blog2.png';
-import blog3 from '../assets/Blog-post/blog3.png';
-import blog4 from '../assets/Blog-post/blog4.png';
+import blog1 from '../assets/Blog-post/blog1.jpg';
+import blog2 from '../assets/Blog-post/blog2.jpg';
+import blog3 from '../assets/Blog-post/blog3.jpg';
+import blog4 from '../assets/Blog-post/blog4.jpg';
 import popularPost1 from '../assets/popular-post/m-blog-1.jpg';
 import popularPost2 from '../assets/popular-post/m-blog-2.jpg';
 import popularPost3 from '../assets/popular-post/m-blog-3.jpg';
