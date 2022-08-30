@@ -19,19 +19,19 @@ const HeaderBlooger = () => {
     const pages = ['Home', 'Category', 'Archive', 'Pages', 'Contact'];
     const socials = [
         {
-            icon:FacebookIcon,
+            Icon:FacebookIcon,
             link:'https://giphy.com/gifs/percolategalactic-percolate-galactic-zuckerberg-l3vR91dwJdtzVRoCA/fullscreen'
         },
         {
-            icon:InstagramIcon,
+            Icon:InstagramIcon,
             link: 'https://www.instagram.com/rick_rolldaily/'
         },
         {
-            icon:TwitterIcon,
+            Icon:TwitterIcon,
             link: 'https://giphy.com/gifs/biohazard-biological-zombie-danger-konczakowski-3oKIP657aH5QRMkX3q/fullscreen'
         }, 
         {
-            icon:YouTubeIcon,
+            Icon:YouTubeIcon,
             link:'https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley'
         }
     ];
@@ -174,7 +174,7 @@ const HeaderBlooger = () => {
                         >
                         {socials.map((SocialIcon, idx) => (
                             <MenuItem key={idx} sx={{'&:hover':{backgroundColor:'black', color:'white'}}} onClick={handleCloseSocialsMenu}>
-                                <Anchor href={SocialIcon.link}><SocialIcon.icon /></Anchor>
+                                <Anchor href={SocialIcon.link}><SocialIcon.Icon /></Anchor>
                             </MenuItem>
                         ))}
                         </Menu>
@@ -182,7 +182,7 @@ const HeaderBlooger = () => {
                     <Box sx={{display:{xs:'none', md:'flex', justifyContent:'space-around'}}}>
                         <NavBarList>
                             {socials.map((SocialIcon, idx) => (
-                                <NavBarItem key={idx}><Anchor  target={'_blank'} href={SocialIcon.link}><SocialIcon.icon /></Anchor></NavBarItem>
+                                <NavBarItem key={idx}><Anchor  target={'_blank'} href={SocialIcon.link}><SocialIcon.Icon /></Anchor></NavBarItem>
                             ))}
                         </NavBarList>
                     </Box>
