@@ -1,28 +1,27 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Container, MainPosts, SideBar, SideBarList, CategoriesListItem, GenericTitle,
+import { Container, MainPosts, SideBar, SideBarList, GenericTitle,
 PostImg, PostBox, PostTitle, PostText, PopularPostItem, PopularPostItemTitle, PostButton,
 NewsLetterBox, NewsLetterInput} from '../style/main_content';
 import useMainPosts from '../hooks/useMainPosts';
 
-const CategoryTextP = styled(PostText)`
-    padding: 0 0 2px 0;
-    margin: 0;
-`
 const PopularPostTitle = styled(GenericTitle)`
-    margin: 125px 0 70px 0;
+    text-align: center;
+    margin: 0 0 30px 0;
 `
 const NewsLetterButton = styled(PostButton)`
-    margin: 10px 50px;
+    width: 50%;
+    margin: 10px 0;
+    padding: 10px 3px;
     @media (max-width: 788px) {
-        margin: 10px 0px;
+        margin: 10px auto;
         width: 95%;
     }
 `
 
 const MainContent = () => {
 
-    const [posts, categories, popularPost] = useMainPosts();
+    const [posts, popularPost] = useMainPosts();
 
     function apearCategories() {
         if(document.body.scrollTop > 100) alert('funfa!')
@@ -48,18 +47,6 @@ const MainContent = () => {
                 })}
             </MainPosts>
             <SideBar>
-                <GenericTitle>Category</GenericTitle>
-                <SideBarList>
-                    {categories.map((obj, index ) => {
-                        return (
-                        <CategoriesListItem key={index}>
-                            <CategoryTextP>{obj.category}</CategoryTextP>
-                            <CategoryTextP>{obj.amount}</CategoryTextP>
-                        </CategoriesListItem>
-                        )
-                    })}
-                    
-                </SideBarList>
                 <PopularPostTitle >Popular Posts</PopularPostTitle>
                 <SideBarList>
                     {popularPost.map((post, index )=> {
@@ -83,3 +70,19 @@ const MainContent = () => {
 };
 
 export default MainContent;
+
+
+/*
+<GenericTitle>Category</GenericTitle>
+                <SideBarList>
+                    {categories.map((obj, index ) => {
+                        return (
+                        <CategoriesListItem key={index}>
+                            <CategoryTextP>{obj.category}</CategoryTextP>
+                            <CategoryTextP>{obj.amount}</CategoryTextP>
+                        </CategoriesListItem>
+                        )
+                    })}
+                    
+                </SideBarList>
+*/

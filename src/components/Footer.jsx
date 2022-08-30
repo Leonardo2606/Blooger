@@ -27,7 +27,7 @@ const Footer = () => {
                 <FooterTitle>Instagram</FooterTitle>
                 <FooterInstagramList>
                     {thumbCards.map(img => {
-                        return <FooterItem src={img}/>
+                        return <FooterItem key={img} src={img}/>
                     })}
                 </FooterInstagramList>
             </FooterContentBox>
@@ -36,7 +36,7 @@ const Footer = () => {
                 <FooterText>Let us be social</FooterText>
                 <FooterSocialList>
                     {socialMedia.map(img=>{
-                        return <FooterSocialImg src={img}/>
+                        return <FooterSocialImg key={img} src={img}/>
                     })}
                 </FooterSocialList>
             </FooterContentBox>

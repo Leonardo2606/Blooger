@@ -12,12 +12,29 @@ import MenuItem from '@mui/material/MenuItem';
 import Container from '@mui/material/Container';
 import FacebookIcon from '@mui/icons-material/Facebook'; import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter'; import YouTubeIcon from '@mui/icons-material/YouTube';
-import { NavBarList, NavBarItem } from '../style/header';
+import { NavBarList, NavBarItem, Anchor } from '../style/header';
 
 const HeaderBlooger = () => {
 
     const pages = ['Home', 'Category', 'Archive', 'Pages', 'Contact'];
-    const socials = [FacebookIcon, InstagramIcon, TwitterIcon, YouTubeIcon];
+    const socials = [
+        {
+            icon:FacebookIcon,
+            link:'https://giphy.com/gifs/percolategalactic-percolate-galactic-zuckerberg-l3vR91dwJdtzVRoCA/fullscreen'
+        },
+        {
+            icon:InstagramIcon,
+            link: 'https://www.instagram.com/rick_rolldaily/'
+        },
+        {
+            icon:TwitterIcon,
+            link: 'https://giphy.com/gifs/biohazard-biological-zombie-danger-konczakowski-3oKIP657aH5QRMkX3q/fullscreen'
+        }, 
+        {
+            icon:YouTubeIcon,
+            link:'https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley'
+        }
+    ];
 
     const [anchorElNav, setAnchorElNav] = useState(null);
     const [anchorElUser, setAnchorElUser] = useState(null);
@@ -44,7 +61,10 @@ const HeaderBlooger = () => {
                         xs: 'flex', 
                         justifyContent:'space-between', 
                         sm:'grid',
-                        gridTemplateColumns:'15% 70% 15%'
+                        gridTemplateColumns:'17% 65.5% 17.5%',
+                        '@media (max-width:900px)': {
+                            gridTemplateColumns: '17% 78% 5%'
+                        }
                     }
                     }} 
                     disableGutters
@@ -56,10 +76,8 @@ const HeaderBlooger = () => {
                         sx={
                             {
                                 fontWeight:500,
-                                display: { xs: 'none', sm: 'flex' },
-                                '@media (max-width:650px)':{
-                                    fontSize:'2rem'
-                                }
+                                fontSize: 'calc(10px + 3.090625vw)',
+                                display: { xs: 'none', sm: 'flex' }
                             }
                         }
                     >
@@ -78,6 +96,7 @@ const HeaderBlooger = () => {
                             </IconButton>
                         </Tooltip>
                         <Menu
+                            
                             id="menu-appbar"
                             anchorOrigin={{
                               vertical: 'top',
@@ -91,19 +110,19 @@ const HeaderBlooger = () => {
                             open={Boolean(anchorElNav)}
                             onClose={handleCloseNavMenu}
                         >
-                            {pages.map((page) => (
-                                <MenuItem sx={{'&:hover':{backgroundColor:'#95c2e0'}}} key={page} onClick={handleCloseNavMenu}>
+                            {pages.map((page, idx) => (
+                                <MenuItem key={idx} sx={{'&:hover':{backgroundColor:'#95c2e0'}}} onClick={handleCloseNavMenu}>
                                     <Typography textAlign="center">{page}</Typography>
                                 </MenuItem>
                             ))}
                             
                         </Menu>    
                     </Box>
-                    <Box sx={{ display: { xs: 'none', sm: 'flex', justifyContent:'space-evenly', width: '80%' } }}>
-                        {pages.map((page) => (
+                    <Box sx={{ display: { xs: 'none', sm: 'flex', justifyContent:'space-evenly', width: '100%' } }}>
+                        {pages.map((page, idx) => (
                         <Button
-                            key={page}
                             onClick={handleCloseNavMenu}
+                            key={idx}
                             sx={{ 
                                 my: 2, 
                                 color: 'white', 
@@ -132,7 +151,7 @@ const HeaderBlooger = () => {
                         Blooger
                     </Typography>
 
-                    <Box sx={{ display: {xs:'flex', sm:'none'} } }>
+                    <Box sx={{ display: {xs:'flex', md:'none', justifyContent:'space-around'} } }>
                         <Tooltip title="Social Media">
                             <IconButton 
                                 color='inherit'
@@ -153,17 +172,17 @@ const HeaderBlooger = () => {
                             open={Boolean(anchorElUser)}
                             onClose={handleCloseSocialsMenu}
                         >
-                        {socials.map((Setting) => (
-                            <MenuItem sx={{'&:hover':{backgroundColor:'black', color:'white'}}} key={Setting} onClick={handleCloseSocialsMenu}>
-                                <Setting/>
+                        {socials.map((SocialIcon, idx) => (
+                            <MenuItem key={idx} sx={{'&:hover':{backgroundColor:'black', color:'white'}}} onClick={handleCloseSocialsMenu}>
+                                <Anchor href={SocialIcon.link}><SocialIcon.icon /></Anchor>
                             </MenuItem>
                         ))}
                         </Menu>
                     </Box>
-                    <Box sx={{display:{xs:'none', sm:'flex', justifyContent:'space-around'}}}>
+                    <Box sx={{display:{xs:'none', md:'flex', justifyContent:'space-around'}}}>
                         <NavBarList>
-                            {socials.map((Setting) => (
-                                <NavBarItem key={Setting}><Setting /></NavBarItem>
+                            {socials.map((SocialIcon, idx) => (
+                                <NavBarItem key={idx}><Anchor  target={'_blank'} href={SocialIcon.link}><SocialIcon.icon /></Anchor></NavBarItem>
                             ))}
                         </NavBarList>
                     </Box>
