@@ -94,7 +94,14 @@ export const FooterSocialList = styled.div`
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    margin: 20px 30px 0 0;
+    margin: 20px auto;
+    @media (max-width: 788px) {
+        width: 80%;
+        margin: 20px 0;
+    }
+    @media (max-width: 380px) {
+        width: 68%;
+    }
 `
 
 export const FooterSocialImg = styled.img`
@@ -106,5 +113,8 @@ export const FooterSocialImg = styled.img`
     :hover {
         cursor: pointer;
         transform: scale(1.3);
+    }
+    @media (max-width: 380px) {
+        margin: 5px;
     }
 `

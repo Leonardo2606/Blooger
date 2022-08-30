@@ -1,67 +1,90 @@
 import styled from 'styled-components';
 import Background2 from '../assets/Abract01.png';
 
+export const BlogPostContainer = styled.div`
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 100%;
+    overflow: hidden;
+    background-image: url(${Background2});
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    @media (max-width: 788px) {
+        background-size: 100% 80%;
+        background-repeat: no-repeat;
+        background-position: right;
+    };
+`   
+
+export const BlogPostSection = styled.div`
+    display: flex;
+    height: 500px;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+`
+
 export const BlogCard = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     width: 280px;
     height: 380px;
+    border-radius: 10px;
     background-color: rgba(250,250,250,0);
     box-shadow: 0px 15px 15px rgba(0,0,0,30%);
     transition: all 1s ease;
-    transition-delay: 2s;
-    opacity: 0;
     overflow: hidden;
-    &:nth-child(1){
-        margin-left: 100px;
-    };
     @media (max-width: 890px) {
         width: 240px;
-        height: 330px;
-    }
+        height: 350px;
+    };
     @media (max-width: 788px) {
-        width: 150px;
-        height: 230px;
-        :hover {
-            width: 180px;
-            height: 260px;
+        width: 200px;
+        height: 290px;
+    };
+    @media (max-width: 610px) {
+        &:nth-child(1){
+            width: 300px;
+            position: relative;
+            left: -40px;
+            opacity: 0.6;
+        }
+        &:nth-child(2){
+            width: 430px;
+            height: 380px;
+        }
+        &:nth-child(3){
+            width: 300px;
+            position: relative;
+            right: -40px;
+            opacity: 0.6;
         }
     }
-`
-/*^  ^^^^^^   animation: ${further} 2s;
-animation-delay: 2s;*/
-export const BlogPostSection = styled.div`
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background-image: url(${Background2});
-    background-size: 60% 100%;
-    background-repeat: no-repeat;
-    background-position: right;
-    height: 95vh;
-    @media (max-width: 788px) {
-        background-size: 100% 80%;
-        background-repeat: no-repeat;
-        background-position: right;
+    @media (max-width: 470px) {
+        &:nth-child(1){
+            width: 500px;
+            position: relative;
+            left: -40px;
+            opacity: 0.6;
+        }
+        &:nth-child(2){
+            width: 1030px;
+            height: 380px;
+        }
+        &:nth-child(3){
+            width: 500px;
+            position: relative;
+            right: -40px;
+            opacity: 0.6;
+        }
     }
 `
 
-export const BlogPostContainer = styled.div`
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 60px, auto;
-    &:hover ${BlogCard} {
-        transition: all 0.5s ease;
-        opacity: 1;
-        &:nth-child(1){
-            margin: 0;
-        }
-    };
-`   
-// ^^^^ animation: ${closer} 0.7s;
+
 export const BlogPostButtonsDiv = styled.div`
+    height: 30px;
     margin: auto;
 `
 
@@ -77,9 +100,8 @@ export const Button = styled.button`
 `
 
 export const BlogCardImg = styled.img`
-    flex: 1 1 50%;
+    flex: 1 1 50%;    
 `
-
 export const BlogCardText = styled.p`
     font-family: sans-serif;    
     font-weight: bold;
@@ -89,7 +111,7 @@ export const BlogCardText = styled.p`
     margin-top: 30px;
     @media (max-width: 788px) {
         font-size: 0.8rem;
-        margin: 10px 0;
+        margin: 10px;
     }
 `
 
@@ -104,8 +126,8 @@ export const BlogCardButton = styled.button`
         cursor: pointer;
     }
     @media (max-width: 788px) {
-        width: 80px;
-        height: 20px;
+        width: 100px;
+        height: 35px;
         padding: 3px 0 5px 0;
     }
 `
@@ -113,10 +135,17 @@ export const BlogCardButton = styled.button`
 export const BlogCardFooter = styled.footer`
     text-align: center;
     color: rgba(0,0,0,90%);
-    font-size: 0.8rem;
-    margin-top: 20px;   
+    font-size: 0.8rem; 
     flex: 1 0 auto;
+    
+    margin: 10px;
+    @media (max-width:890px){
+        margin: 15px 10px;
+    }
     @media (max-width: 788px) {
-        margin: 10px 0 5px 0;
+        margin: 5px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
     }
 `

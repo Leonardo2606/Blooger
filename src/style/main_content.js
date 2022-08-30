@@ -2,19 +2,33 @@ import styled from 'styled-components';
 
 export const Container = styled.main`
     width: 95%;
-    margin: auto;
+    margin: 50px auto;
     display: grid;
     grid-template-columns: 60% 35%;
+    @media (max-width: 560px) {
+        width: 100%;
+        grid-template-columns: 90% 10%;
+        margin: 50px 5px;
+    }
 `
 
 export const MainPosts = styled.div`
     display: flex;
     flex-direction: column;
+    @media (max-width: 560px){
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
 `
 
 export const SideBar = styled.div`
     width: 100%;
     margin-left: 30px;  
+    @media (max-width: 560px) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        margin: 0;
+    }
 `
 
 export const PostBox = styled.div`
@@ -30,6 +44,7 @@ export const PostImg = styled.img`
     transition: all 1s ease;
     :hover {
         transform: scale(1.05);
+        image-size: cover;
     }
 `
 
@@ -67,9 +82,14 @@ export const GenericTitle = styled.h2`
 
 export const SideBarList = styled.ul`
     list-style: none;
+    width: 80%;
+    margin: auto;
     transition: all 1s ease;
-    @media (max-width: 580px) {
-        padding: 0;
+    padding: 0;
+    @media (max-width: 560px) {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
     }
 `
 
@@ -91,6 +111,13 @@ export const PopularPostItem = styled.li`
     margin: 0 0 80px 0;
     display: flex;
     flex-direction: column;
+    @media (max-width: 560px) {
+        width: 45%;
+        margin: 10px auto;
+    };
+    @media (max-width: 360px) {
+        width: 80%;
+    }
 `
 
 export const PopularPostItemTitle = styled.h4`
@@ -100,15 +127,18 @@ export const PopularPostItemTitle = styled.h4`
 export const NewsLetterBox = styled.form`
     display: flex;
     flex-direction: column;
+    margin: auto;
+    @media (max-width: 560px) {
+        width: 90%;
+    }
 `
 
 export const NewsLetterInput = styled.input`
     type: email;
-    width: 60%;
-    padding: 10px;
-    margin: 0 50px;
+    width: 100%;
+    padding: 10px 3px;
     @media(max-width:788px) {
-        width: 80%;
-        margin: 0;
+        width: 95%;
+        margin: auto;
     }   
 `

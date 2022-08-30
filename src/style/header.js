@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 import menu from '../assets/menu.png';
 
+export const Anchor = styled.a`
+    text-decoration: none;
+    color: inherit;
+`
+
 export const Header = styled.header`
     width: 100%;
     height: 80px;
@@ -26,7 +31,6 @@ export const Title = styled.h1`
 export const NavBarList = styled.ul`
     list-style: none;
     padding: 0;
-    
 `
 
 export const NavBarItem = styled.li`
