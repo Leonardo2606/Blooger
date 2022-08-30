@@ -12,20 +12,13 @@ import popularPost5 from '../assets/popular-post/m-blog-5.jpg';
 function useMainPosts() {
 
     const [posts] = useState([blog1, blog2, blog3, blog4]);
-    const [categories] = useState([
-        {category: 'Software', amount: '(5)'},
-        {category: 'Techology', amount: '(2)'},
-        {category: 'Lifestyle', amount: '(7)'},
-        {category: 'Shopping', amount: '(1)'},
-        {category: 'Food', amount: '(8)'}
-    ])
 
     const [popularPost] = useState([
         popularPost1, popularPost2, popularPost3, popularPost4, popularPost5
     ])
 
 
-    return [posts, categories, popularPost];
+    return [posts, popularPost];
 
 }
 

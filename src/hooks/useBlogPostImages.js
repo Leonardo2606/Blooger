@@ -16,12 +16,12 @@ function useBlogPostImages() {
     let min2 = '2 minutes';
 
     const [postArray, setPostArray] = useState([0,1,2]);
-    const [allPostsArray, setallPostArray] = useState([
+    const allPostsArray = [
         {img:post1, text, min2, id:1}, {img:post2, text, min2, id:2}, {img:post3, text, min2, id:3}, 
         {img:post4, text, min2, id:4}, {img:post5, text, min2, id:5}, {img:post6, text, min2, id:6}, 
         {img:post7, text, min2, id:7}, {img:post8, text, min2, id:8},
         {img:post9, text, min2, id:9}, {img:post10, text, min2, id:10}
-    ]);
+    ];
     const [first, middle, last] = [...postArray];
 
     function forwardPosts() {
