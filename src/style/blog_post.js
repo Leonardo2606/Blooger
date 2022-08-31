@@ -23,6 +23,9 @@ export const BlogPostSection = styled.div`
     justify-content: space-evenly;
     align-items: center;
     overflow: hidden;
+    @media (max-width: 470px) {
+        height: 400px;
+    }
 `
 
 export const BlogCard = styled.div`
@@ -62,7 +65,7 @@ export const BlogCard = styled.div`
             opacity: 0.6;
         }
     }
-    @media (max-width: 470px) {
+    @media (max-width: 530px) {
         &:nth-child(1){
             width: 500px;
             position: relative;
@@ -80,6 +83,13 @@ export const BlogCard = styled.div`
             opacity: 0.6;
         }
     }
+    @media (max-width: 470px) {
+        &:nth-child(2){
+            width: 2000px;
+            height: 380px;
+        }
+    }
+    
 `
 
 

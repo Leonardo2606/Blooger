@@ -62,6 +62,7 @@ export const FooterButton = styled.button`
     font-size: 1.1rem;
     background-color: rgb(149, 194, 224);
     margin: 0;
+    margin-top: 10px;
     padding: 0;
     :hover {
         cursor: pointer;
