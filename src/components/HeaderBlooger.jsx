@@ -28,7 +28,7 @@ const HeaderBlooger = () => {
         },
         {
             Icon:TwitterIcon,
-            link: 'https://giphy.com/gifs/biohazard-biological-zombie-danger-konczakowski-3oKIP657aH5QRMkX3q/fullscreen'
+            link: 'https://spa-business-list.netlify.app/'
         }, 
         {
             Icon:YouTubeIcon,
