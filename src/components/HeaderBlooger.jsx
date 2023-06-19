@@ -81,7 +81,7 @@ const HeaderBlooger = () => {
                             }
                         }
                     >
-                        Blooger
+                        Blogger
                     </Typography>
 
                     <Box sx={{ display: { xs: 'flex', sm: 'none' } }}>
@@ -148,7 +148,7 @@ const HeaderBlooger = () => {
                             }
                         }
                     >
-                        Blooger
+                        Blogger
                     </Typography>
 
                     <Box sx={{ display: {xs:'flex', md:'none', justifyContent:'space-around'} } }>
